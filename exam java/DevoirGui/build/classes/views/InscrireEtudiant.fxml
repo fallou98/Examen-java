@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="483.0" prefWidth="631.0" style="-fx-border-color: blue;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FXMLDocumentController">
+   <children>
+      <Pane layoutX="47.0" layoutY="31.0" prefHeight="161.0" prefWidth="227.0" style="-fx-background-color: white; -fx-border-color: black;">
+         <children>
+            <Label layoutX="11.0" layoutY="44.0" text="Numero">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNumero" layoutX="67.0" layoutY="41.0" />
+            <Label layoutX="67.0" layoutY="14.0" text="Info Etudiant">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="82.0" text="Prenom">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPrenom" layoutX="67.0" layoutY="79.0" />
+            <Label layoutX="11.0" layoutY="119.0" text="Nom">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNom" layoutX="67.0" layoutY="116.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="347.0" layoutY="31.0" prefHeight="161.0" prefWidth="227.0" style="-fx-background-color: white; -fx-border-color: black;">
+         <children>
+            <Label layoutX="15.0" layoutY="54.0" text="Classe">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="3.0" layoutY="94.0" text="AnneeScol">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cboClasse" layoutX="74.0" layoutY="50.0" prefWidth="150.0" />
+            <ComboBox fx:id="cboAnneeScol" layoutX="74.0" layoutY="90.0" prefWidth="150.0" />
+            <Label layoutX="64.0" layoutY="10.0" prefHeight="25.0" prefWidth="92.0" text="Inscription">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="63.0" layoutY="209.0" text="Annee">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cboAnneeScol" layoutX="47.0" layoutY="226.0" prefWidth="150.0" />
+      <ComboBox fx:id="cboClasse" layoutX="272.0" layoutY="226.0" prefWidth="150.0" />
+      <Label layoutX="272.0" layoutY="208.0" text="Classe">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnSearchClasse" layoutX="455.0" layoutY="226.0" mnemonicParsing="false" onAction="#handleSearchClasseEtudiant" text="OK">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnInscrireEtudiant" layoutX="471.0" layoutY="197.0" mnemonicParsing="false" onAction="#handleInscrireEtudiantByNum" prefHeight="25.0" prefWidth="110.0" text="Inscrire">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblVInfoEtudiant" layoutX="47.0" layoutY="269.0" prefHeight="200.0" prefWidth="533.0">
+        <columns>
+          <TableColumn fx:id="tbleNom" prefWidth="143.0" text="Nom" />
+          <TableColumn fx:id="tblePrenom" prefWidth="140.0" text="Prenom" />
+            <TableColumn fx:id="tbleClasse" prefWidth="133.0" text="Classe" />
+            <TableColumn fx:id="tbleAnneeScol" prefWidth="116.0" text="AnneeScol" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
